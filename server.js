@@ -1,3 +1,5 @@
+const igdb = require('igdb-api-node');
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var unirest = require('unirest');

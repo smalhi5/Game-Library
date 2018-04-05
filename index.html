@@ -120,14 +120,14 @@
           <!-- Search Widget -->
           <div class="card my-4">
             <h5 class="card-header">Explore Games</h5>
-            <div class="card-body">
+            <form class="card-body" action="/search">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="What are you searching for?">
+                <input id="searchBox" name="terms" type="text" class="form-control" placeholder="What are you searching for?">
                 <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Go!</button>
+                  <input id="searchButton" class="btn btn-secondary" type="submit" value="GO!"></input>
                 </span>
               </div>
-            </div>
+            </form>
           </div>
 
           <!-- Categories Widget -->
