@@ -1,3 +1,4 @@
+const igdb = require('igdb-api-node');
 var express = require('express');
 var bodyParser = require('body-parser');
 var unirest = require('unirest');
@@ -13,7 +14,7 @@ app.use(function(req, res, next) {
 
 app.set('port', (process.env.PORT || 5000));
 app.get('*', function(req, res) {
-    res.sendfile('index.html');
+    res.sendfile('/public/index.html');
 });
 
 app.post('/getgames', function(req, res) {
