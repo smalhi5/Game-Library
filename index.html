@@ -118,19 +118,20 @@
 
       </div>
 
-      <!-- Sidebar Widgets Column -->
-      <div class="col-md-4">
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
 
-        <!-- Search Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Explore Games</h5>
-          <div class="card-body">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="What are you searching for?">
-              <span class="input-group-btn">
-                <button class="btn btn-secondary" type="button">Go!</button>
-              </span>
-            </div>
+          <!-- Search Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Explore Games</h5>
+            <form class="card-body" action="/search">
+              <div class="input-group">
+                <input id="searchBox" name="terms" type="text" class="form-control" placeholder="What are you searching for?">
+                <span class="input-group-btn">
+                  <input id="searchButton" class="btn btn-secondary" type="submit" value="GO!"></input>
+                </span>
+              </div>
+            </form>
           </div>
         </div>
 
