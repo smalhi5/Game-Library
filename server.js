@@ -15,7 +15,7 @@ app.use(function(req, res, next) {
 
 app.set('port', (process.env.PORT || 5000));
 app.get('*', function(req, res) {
-    res.sendfile('./public/index.html');
+    res.sendfile('public/index.html');
 });
 
 app.post('/getgames', function(req, res) {
@@ -38,6 +38,7 @@ app.post('/getgames', function(req, res) {
             });
     }
 });
+
 app.post('/singlegame', function(req, res) {
     console.log(req.body.id);
     unirest.get("https://igdbcom-internet-game-database-v1.p.mashape.com/games/" + req.body.id + "?fields=*")
@@ -47,4 +48,8 @@ app.post('/singlegame', function(req, res) {
             console.log(result.status, result.body);
             res.send(result.body);
         });
+});
+
+app.listen(app.get('port'), function() {
+    console.log("Node app is running at localhost:" + app.get('port'));
 });
