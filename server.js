@@ -5,6 +5,7 @@ var unirest = require('unirest');
 var app = express();
 
 app.use(bodyParser.json());
+app.use(express.static("./public"));
 app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'OPTIONS, GET, POST');
@@ -14,7 +15,7 @@ app.use(function(req, res, next) {
 
 app.set('port', (process.env.PORT || 5000));
 app.get('*', function(req, res) {
-    res.sendfile('/public/index.html');
+    res.sendfile('./public/index.html');
 });
 
 app.post('/getgames', function(req, res) {
